@@ -13,6 +13,9 @@ Czargroup\Example is responsible for following task.
 ### Add repository
 Repositry : composer config repositories.rajtech-czargroup-example git https://github.com/pawarrajendra200/customer-survey.git
 
+### Install the Extension using Composer
+composer require czargroup/example=dev-master
+
 ### Enable the Extension
 
 php bin/magento module:enable Czargroup_Example
