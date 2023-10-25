@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Czargroup Technologies
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the theninehertz.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category   Czargroup Technologies
+ * @package     Czargroup_Example
+ * @copyright   Copyright (c) Ninehertz India Pvt. Ltd. (https://www.czargroup.net/)
+ * @license     -  
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+       <tab id="czargroup" translate="label" sortOrder="40">
+             <label>Czargroup</label>
+        </tab>
+        <section id="survey" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Customer Survey</label>
+            <tab>czargroup</tab>    
+            <resource>Czargroup_Example::survey</resource>    
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                    <field id="questions" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Questions</label>
+                        <frontend_model>Czargroup\Example\Block\Adminhtml\MultiRow</frontend_model>
+                        <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    </field>
+            </group>
+        </section>
+    </system>
+</config>

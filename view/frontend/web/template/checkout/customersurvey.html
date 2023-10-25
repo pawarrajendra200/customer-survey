@@ -1,0 +1,15 @@
+<!-- ko if: getSurvey() -->
+<div class="field _required">
+    <br>
+    <label class="label" for="survey">
+        <span name="customer_survey_name" data-bind="html: getSurvey()"></span>
+    </label>
+    <div class="control" data-bind="css: {'_with-tooltip': element.tooltip}">
+    <input class="radio" type="radio" value="Yes" name="customer_survey" aria-required="true" aria-invalid="false" id="surveyyes" />Yes
+    <br>
+    <input class="radio" type="radio" value="No" name="customer_survey" aria-required="true" aria-invalid="false" id="surveyno" />No
+    </div>
+    <div class="survey-error">
+    </div>    
+</div>
+<!-- /ko -->

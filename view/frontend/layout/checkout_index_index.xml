@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Czargroup Technologies
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the theninehertz.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category   Czargroup Technologies
+ * @package     Czargroup_Example
+ * @copyright   Copyright (c) Ninehertz India Pvt. Ltd. (https://www.czargroup.net/)
+ * @license     -  
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="billing-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="payment" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+
+                                                        <item name="payments-list" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="customer-survey" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">Czargroup_Example/js/checkout/customer-survey</item>
+                                                                    <item name="displayArea" xsi:type="string">before-place-order</item>
+                                                                    <item name="dataScope" xsi:type="string">customersurvey</item>
+                                                                    <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="additional-payment-validators" xsi:type="array">
+                                                                <item name="children" xsi:type="array">                                                                    
+                                                                    <item name="gmailValidation" xsi:type="array">
+                                                                        <item name="component" xsi:type="string">Czargroup_Example/js/view/validate</item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
+                                                        

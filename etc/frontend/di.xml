@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Czargroup Technologies
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the theninehertz.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category   Czargroup Technologies
+ * @package     Czargroup_Example
+ * @copyright   Copyright (c) Ninehertz India Pvt. Ltd. (https://www.czargroup.net/)
+ * @license     -  
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="survey_config_provider" xsi:type="object">Czargroup\Example\Model\Checkout\SurveyConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

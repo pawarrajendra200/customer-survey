@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Czargroup Technologies
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the theninehertz.com license
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category   Czargroup Technologies
+ * @package     Czargroup_Example
+ * @copyright   Copyright (c) Ninehertz India Pvt. Ltd. (https://www.czargroup.net/)
+ * @license     -  
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Czargroup\Example\Api\CustomerSurveyInterface" type="Czargroup\Example\Model\CustomerSurvey"/>  
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sales_order_grid_data_source" xsi:type="string">Czargroup\Example\Model\ResourceModel\Order\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Czargroup\Example\Model\ResourceModel\Order\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sales_order_grid</argument>
+            <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order</argument>
+        </arguments>
+    </type> 
+
+    <type name="Czargroup\Example\Model\ResourceModel\Survey\Survey\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sales_order</argument>
+            <argument name="eventPrefix" xsi:type="string">order_survey_collection</argument>
+            <argument name="eventObject" xsi:type="string">servey_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Czargroup\Example\Model\ResourceModel\Survey</argument>
+        </arguments>
+    </type>
+        
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="customer_survey_list_data_source" xsi:type="string">Czargroup\Example\Model\ResourceModel\Survey\Survey\Collection</item>
+            </argument>
+        </arguments>
+    </type>        
+</config>

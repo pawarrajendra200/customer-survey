@@ -1,0 +1,14 @@
+{
+    "sales_order": {
+        "column": {
+            "survey_question": true,
+            "survey_answer": true
+        }
+    },
+    "quote": {
+        "column": {
+            "survey_question": true,
+            "survey_answer": true
+        }
+    }
+}
