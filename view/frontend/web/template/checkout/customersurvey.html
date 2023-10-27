@@ -5,9 +5,9 @@
         <span name="customer_survey_name" data-bind="html: getSurvey()"></span>
     </label>
     <div class="control" data-bind="css: {'_with-tooltip': element.tooltip}">
-    <input class="radio" type="radio" value="Yes" name="customer_survey" aria-required="true" aria-invalid="false" id="surveyyes" />Yes
+    <input class="radio" type="radio" value="Yes" name="customer_survey"  data-bind='click: addsurvey' id="surveyyes" />Yes
     <br>
-    <input class="radio" type="radio" value="No" name="customer_survey" aria-required="true" aria-invalid="false" id="surveyno" />No
+    <input class="radio" type="radio" value="No" name="customer_survey" data-bind='click: addsurvey' id="surveyno" />No
     </div>
     <div class="survey-error">
     </div>    

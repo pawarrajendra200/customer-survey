@@ -27,11 +27,12 @@ interface CustomerSurveyInterface
     /**
      * @api
      * Save customer survey
-     * @param int $quoteId
-     * @param string $survey_question
-     * @param string $survey_answer
+     * @param string $quoteId
+     * @param bool $isMaskQuoteId
+     * @param string $surveyQuestion
+     * @param string $surveyAnswer
      * @return bool
      */
  
-    public function save($quoteId,$survey_question,$survey_answer);
+    public function save($quoteId,$isMaskQuoteId,$surveyQuestion,$surveyAnswer);
 }
